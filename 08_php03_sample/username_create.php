@@ -1,5 +1,5 @@
 <?php
-// DB接続したいファイル（username_create.php, username_read.php, など）
+// DB接続したいファイル（company_create.php, company_read.php, など）
 
 include('functions.php');
 
