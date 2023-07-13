@@ -16,8 +16,7 @@ if(
   !isset($_POST['teach'])|| $_POST['teach'] === '' ||
   !isset($_POST['detail'])|| $_POST['detail'] === '' ||
   !isset($_POST['kind'])|| $_POST['kind'] === '' ||
-  !isset($_POST['kind2'])|| $_POST['kind2'] === ''|| 
-  !isset($_POST['detail2'])|| $_POST['detail2'] === '' 
+  !isset($_POST['kind2'])|| $_POST['kind2'] === '' 
 ){
     exit('データが足りません');
 }
