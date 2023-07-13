@@ -107,5 +107,55 @@
         <small>School Pipette</small>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+  // フォームの送信処理
+  $("form").on("submit", function (event) {
+    event.preventDefault();
+
+    // 必須項目のチェック
+    const companyName = $("#company_name").val();
+    const location = $("#location").val();
+    const email = $("#email").val();
+    const grade = $("#grade").val();
+    const season = $("#season").val();
+    const teach = $("#teach").val();
+    const textArea = $("#text_area").val();
+    const lessonType = $("input[name='kind']:checked").val();
+    const careerLesson = $("input[name='kind2']:checked").val();
+    const textArea2 = $("#text_area2").val();
+
+    // 未入力項目のチェックとメッセージ表示
+    const errorMessage = $("#error_message");
+    if (
+      !companyName ||
+      !location ||
+      !email ||
+      !grade ||
+      !season ||
+      !teach ||
+      !textArea ||
+      !lessonType ||
+      !careerLesson ||
+      !textArea2
+    ) {
+      errorMessage.text("未入力の項目があります。すべての項目を入力してください。");
+      errorMessage.addClass("show-error");
+      errorMessage[0].scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    } else {
+      errorMessage.text("");
+      errorMessage.removeClass("show-error");
+    }
+
+    // フォーム送信
+    this.submit();
+  });
+});
+
+    </script>
 </body>
 </html>
+
+
